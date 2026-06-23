@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# 环境
+.venv/
+venv/
+env/
+*.conda
+
+# IDE
+.vscode/
+.idea/
+
+# 训练产物
+runs/
+weights/*.pt
+weights/*.engine
+weights/*.onnx
+!weights/.gitkeep
+
+# 数据集（太大，不同步到 GitHub）
+data/*.yaml
+data/train/
+data/val/
+data/test/
+data/__pycache__/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# Jupyter 检查点
+.ipynb_checkpoints/
