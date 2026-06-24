@@ -1,10 +1,25 @@
+--index-url https://download.pytorch.org/whl/cu124
+--extra-index-url https://pypi.org/simple
+--trusted-host download.pytorch.org
+
+# PyTorch 核心（从官方源拉取 CUDA 12.4 版，完美支持 RTX 4060）
+torch>=2.4.0
+torchvision>=0.19.0
+
+# Ultralytics（YOLO 全家桶，自动包含依赖）
 ultralytics>=8.3.0
-torch>=2.1.0
-torchvision>=0.16.0
+
+# ONNX + GPU 推理（需安装支持 CUDA 的 onnxruntime-gpu）
 onnx>=1.15.0
-onnxruntime-gpu>=1.17.0
+onnxruntime-gpu>=1.18.0
+
+# Demo 前端
 gradio>=4.0
+
+# 图像处理
 opencv-python>=4.8.0
+
+# 可视化 + 数据分析
 matplotlib>=3.7.0
 numpy>=1.24.0
 pandas>=2.0.0

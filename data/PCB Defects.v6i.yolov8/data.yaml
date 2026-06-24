@@ -1,0 +1,21 @@
+train: ./train/images
+val: ./valid/images
+test: ./test/images
+
+nc: 6
+names:
+  [
+    "missing_hole",
+    "mouse_bite",
+    "open_circuit",
+    "short",
+    "spur",
+    "spurious_copper",
+  ]
+
+roboflow:
+  workspace: university-2xdiy
+  project: pcb-defects-chi1b
+  version: 6
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/university-2xdiy/pcb-defects-chi1b/dataset/6

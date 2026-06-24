@@ -1,4 +1,26 @@
-# Python
+# === 训练产物（可重新生成，体积大） ===
+runs/
+
+# === 数据集（10,000+ 张图，几百 MB，不能 push） ===
+data/PCB Defects.v6i.yolov8/train/
+data/PCB Defects.v6i.yolov8/valid/
+data/PCB Defects.v6i.yolov8/test/
+data/pre_test/
+
+# === 保留 data.yaml 和示例图片 ===
+!data/PCB Defects.v6i.yolov8/data.yaml
+!data/sample_images/
+!data/sample_results/
+
+# === 模型权重（可重新训练/下载，22MB 也偏大） ===
+# 可以把 best.pt 留作 release 附件而不是 git 跟踪
+*.pt
+*.onnx
+*.engine
+!weights/best.pt
+!weights/best.onnx
+
+# === Python 缓存 ===
 __pycache__/
 *.pyc
 *.pyo
@@ -6,33 +28,21 @@ __pycache__/
 dist/
 build/
 
-# 环境
-.venv/
-venv/
-env/
-*.conda
-
-# IDE
+# === IDE ===
 .vscode/
 .idea/
 
-# 训练产物
-runs/
-weights/*.pt
-weights/*.engine
-weights/*.onnx
-!weights/.gitkeep
+# === 虚拟环境 ===
+.venv/
+venv/
+env/
 
-# 数据集（太大，不同步到 GitHub）
-data/*.yaml
-data/train/
-data/val/
-data/test/
-data/__pycache__/
-
-# 系统
+# === 系统文件 ===
 .DS_Store
 Thumbs.db
 
-# Jupyter 检查点
-.ipynb_checkpoints/
+# === Gradio 运行时缓存 ===
+gradio/
+gradio_certs/
+certificate.pem
+*.pem
